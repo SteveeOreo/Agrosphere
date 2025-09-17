@@ -49,9 +49,9 @@ export default function Profile() {
   }
   return (
     <div className="bg-gray-100 min-h-screen p-4">
-      <div className="max-w-md mx-auto">
+      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
         {/* Profile Header */}
-        <div className="bg-white rounded-lg p-6 mb-4 shadow-sm">
+        <div className="bg-white rounded-lg p-6 mb-4 shadow-sm lg:mb-6">
           {/* Profile Avatar */}
           <div className="flex justify-center mb-4">
             <div className="w-20 h-20 bg-gray-300 rounded-full flex items-center justify-center">
@@ -85,103 +85,105 @@ export default function Profile() {
         </div>
 
         {/* Profile Form */}
-        <div className="bg-white rounded-lg p-6 shadow-sm">
+        <div className="bg-white rounded-lg p-6 shadow-sm lg:p-8">
           {error && (
             <div className="mb-4 p-3 bg-red-100 border border-red-300 text-red-700 rounded-lg">
               {error}
             </div>
           )}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Name:
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
+          <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0 space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Name:
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Contact Info:
+                </label>
+                <input
+                  type="text"
+                  name="contactInfo"
+                  value={formData.contactInfo}
+                  onChange={handleInputChange}
+                  placeholder="Phone number or email"
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Location */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Location:
+                </label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  placeholder="City, State/Region"
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Farm Size */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Farm Size:
+                </label>
+                <input
+                  type="text"
+                  name="farmSize"
+                  value={formData.farmSize}
+                  onChange={handleInputChange}
+                  placeholder="e.g., 2 acres, 500 birds"
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Poultry Type */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Poultry Type:
+                </label>
+                <input
+                  type="text"
+                  name="poultryType"
+                  value={formData.poultryType}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Broilers, Layers, Mixed"
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Specialization */}
+              <div>
+                <label className="block text-gray-800 font-medium mb-2">
+                  Specialization:
+                </label>
+                <input
+                  type="text"
+                  name="specialization"
+                  value={formData.specialization}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Egg Production, Meat Production"
+                  className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                />
+              </div>
             </div>
 
-            {/* Contact Info */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Contact Info:
-              </label>
-              <input
-                type="text"
-                name="contactInfo"
-                value={formData.contactInfo}
-                onChange={handleInputChange}
-                placeholder="Phone number or email"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
-
-            {/* Location */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Location:
-              </label>
-              <input
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={handleInputChange}
-                placeholder="City, State/Region"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
-
-            {/* Farm Size */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Farm Size:
-              </label>
-              <input
-                type="text"
-                name="farmSize"
-                value={formData.farmSize}
-                onChange={handleInputChange}
-                placeholder="e.g., 2 acres, 500 birds"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
-
-            {/* Poultry Type */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Poultry Type:
-              </label>
-              <input
-                type="text"
-                name="poultryType"
-                value={formData.poultryType}
-                onChange={handleInputChange}
-                placeholder="e.g., Broilers, Layers, Mixed"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
-
-            {/* Specialization */}
-            <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Specialization:
-              </label>
-              <input
-                type="text"
-                name="specialization"
-                value={formData.specialization}
-                onChange={handleInputChange}
-                placeholder="e.g., Egg Production, Meat Production"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
-              />
-            </div>
-
-            {/* Years of Experience */}
+            {/* Years of Experience - Full width */}
             <div>
               <label className="block text-gray-800 font-medium mb-2">
                 Years of Experience:
@@ -192,7 +194,7 @@ export default function Profile() {
                 value={formData.yearsExperience}
                 onChange={handleInputChange}
                 placeholder="e.g., 5"
-                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700"
+                className="w-full p-3 bg-gray-200 border-0 rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700 lg:max-w-xs"
               />
             </div>
 
@@ -200,7 +202,7 @@ export default function Profile() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-green-700 text-white py-3 rounded-md font-semibold hover:bg-green-800 transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full lg:w-auto lg:px-8 bg-green-700 text-white py-3 rounded-md font-semibold hover:bg-green-800 transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Saving..." : "Save Profile"}
             </button>

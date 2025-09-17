@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile-specific utilities */
+@layer utilities {
+    .safe-area-pb {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .safe-area-pt {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    .touch-manipulation {
+        touch-action: manipulation;
+    }
+
+    .tap-highlight-none {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Base mobile optimizations */
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Prevent horizontal scrolling */
+    body,
+    html {
+        overflow-x: hidden;
+    }
+}
+
+/* Custom mobile components */
+@layer components {
+    .mobile-card {
+        @apply bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200;
+    }
+
+    .mobile-button {
+        @apply px-4 py-3 rounded-lg font-semibold transition-colors duration-200 tap-highlight-none touch-manipulation;
+    }
+
+    .mobile-input {
+        @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent;
+    }
+}

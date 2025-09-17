@@ -2,14 +2,14 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-6 py-16 bg-white">
+      <section className="flex flex-col items-center justify-center text-center px-4 py-8 sm:px-6 sm:py-12 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col items-center mb-6">
-            <h1 className="text-4xl md:text-6xl font-bold text-green-700 leading-tight text-center">
+          <div className="flex flex-col items-center mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-green-700 leading-tight text-center px-2">
               Welcome to Agrosphere 🌱
             </h1>
           </div>
-          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
             Connecting small-scale farmers for{" "}
             <span className="font-semibold text-green-700">
               bulk feed contributions
@@ -24,24 +24,24 @@ export default function Home() {
             </span>
             . Together, we grow better.
           </p>
-          <button className="bg-yellow-400 text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 hover:text-white transition-all transform hover:scale-105 shadow-lg">
+          <button className="bg-yellow-400 text-gray-800 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-orange-500 hover:text-white transition-all transform hover:scale-105 shadow-lg w-full max-w-xs sm:w-auto">
             Get Started
           </button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
+      <section className="py-12 px-4 sm:py-16 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-8 sm:mb-12">
             Why Choose Agrosphere?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Feature 1 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <svg
-                  className="w-8 h-8 text-green-700"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-green-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -54,20 +54,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                 Community Learning
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Connect with experienced farmers and mentors to share knowledge
                 and best practices.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -80,20 +80,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                 Bulk Purchasing
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Pool resources with other farmers to get better prices on feed,
                 equipment, and supplies.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <svg
-                  className="w-8 h-8 text-orange-600"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -106,10 +106,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                 Training Resources
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Access courses on disease prevention, poultry management, and
                 business skills.
               </p>
@@ -119,20 +119,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-green-700 py-16 px-6 text-center">
+      <section className="bg-green-700 py-12 px-4 sm:py-16 sm:px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 px-2">
             Ready to Join Our Farming Community?
           </h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-green-100 mb-6 sm:mb-8 px-4">
             Start connecting with fellow farmers today and grow your business
             together.
           </p>
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <button className="w-full sm:w-auto bg-yellow-400 text-gray-800 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-orange-500 hover:text-white transition">
+          <div className="space-y-3 sm:space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center px-4">
+            <button className="w-full md:w-auto bg-yellow-400 text-gray-800 px-6 py-3 sm:px-8 rounded-lg text-base sm:text-lg font-semibold hover:bg-orange-500 hover:text-white transition">
               Sign Up Free
             </button>
-            <button className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-700 transition">
+            <button className="w-full md:w-auto bg-transparent border-2 border-white text-white px-6 py-3 sm:px-8 rounded-lg text-base sm:text-lg font-semibold hover:bg-white hover:text-green-700 transition">
               Learn More
             </button>
           </div>

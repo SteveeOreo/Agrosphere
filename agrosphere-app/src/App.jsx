@@ -17,12 +17,10 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        {/* Desktop Navbar - hidden on mobile */}
-        <div className="hidden md:block">
-          <Navbar />
-        </div>
+        {/* Navbar - visible on all screen sizes */}
+        <Navbar />
 
-        <main className="flex-grow pb-16 md:pb-0 md:p-4">
+        <main className="flex-grow pb-20 md:pb-0">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
@@ -38,7 +36,7 @@ function App() {
         </main>
 
         {/* Desktop Footer - hidden on mobile */}
-        <div className="hidden md:block">
+        <div className="hidden md:block mt-auto">
           <Footer />
         </div>
 
