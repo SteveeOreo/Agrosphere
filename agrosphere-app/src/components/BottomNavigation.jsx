@@ -7,18 +7,18 @@ export default function BottomNavigation() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-      <div className="flex justify-around items-center py-2">
+      <div className="flex items-center justify-between py-3 px-4">
         {/* Home */}
         <Link
           to="/"
-          className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 ${
+          className={`flex flex-col items-center py-1 px-2 ${
             isActive("/")
               ? "text-green-700"
               : "text-gray-500 hover:text-orange-500"
           } transition-colors`}
         >
           <svg
-            className="w-6 h-6 mb-1"
+            className="w-5 h-5 mb-1"
             fill={isActive("/") ? "currentColor" : "none"}
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -36,14 +36,14 @@ export default function BottomNavigation() {
         {/* Marketplace */}
         <Link
           to="/marketplace"
-          className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 ${
+          className={`flex flex-col items-center py-1 px-2 ${
             isActive("/marketplace")
               ? "text-green-700"
               : "text-gray-500 hover:text-orange-500"
           } transition-colors`}
         >
           <svg
-            className="w-6 h-6 mb-1"
+            className="w-5 h-5 mb-1"
             fill={isActive("/marketplace") ? "currentColor" : "none"}
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -61,14 +61,14 @@ export default function BottomNavigation() {
         {/* Notifications */}
         <Link
           to="/notifications"
-          className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 relative ${
+          className={`flex flex-col items-center py-1 px-2 relative ${
             isActive("/notifications")
               ? "text-green-700"
               : "text-gray-500 hover:text-orange-500"
           } transition-colors`}
         >
           <svg
-            className="w-6 h-6 mb-1"
+            className="w-5 h-5 mb-1"
             fill={isActive("/notifications") ? "currentColor" : "none"}
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -81,21 +81,21 @@ export default function BottomNavigation() {
             />
           </svg>
           {/* Notification Badge */}
-          <div className="absolute top-1 right-3 w-2 h-2 bg-orange-500 rounded-full"></div>
+          <div className="absolute top-0 right-1 w-2 h-2 bg-orange-500 rounded-full"></div>
           <span className="text-xs font-medium">Alerts</span>
         </Link>
 
         {/* Forum/Chat */}
         <Link
           to="/forum"
-          className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 ${
+          className={`flex flex-col items-center py-1 px-2 ${
             isActive("/forum")
               ? "text-green-700"
               : "text-gray-500 hover:text-orange-500"
           } transition-colors`}
         >
           <svg
-            className="w-6 h-6 mb-1"
+            className="w-5 h-5 mb-1"
             fill={isActive("/forum") ? "currentColor" : "none"}
             stroke="currentColor"
             viewBox="0 0 24 24"

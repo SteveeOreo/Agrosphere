@@ -4,23 +4,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-6 py-16 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-green-700 leading-tight mb-6">
-            Welcome to{" "}
-            <span className="inline-flex items-center">
-              AGR
-              <span className="inline-flex items-center mx-2">
-                <svg
-                  className="w-12 h-12 md:w-16 md:h-16 text-orange-500"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </span>
-              SPHERE
-            </span>{" "}
-            🌱
-          </h1>
+          <div className="flex flex-col items-center mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-green-700 leading-tight text-center">
+              Welcome to Agrosphere 🌱
+            </h1>
+          </div>
           <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-8">
             Connecting small-scale farmers for{" "}
             <span className="font-semibold text-green-700">

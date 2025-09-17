@@ -1,3 +1,5 @@
+import logoImage from "../images/greenlogo.PNG";
+
 export default function Marketplace() {
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -5,19 +7,11 @@ export default function Marketplace() {
       <div className="bg-white p-4 shadow-sm">
         <div className="flex items-center justify-between mb-4">
           <div className="text-center flex-1">
-            <h1 className="text-xl font-bold text-gray-800 tracking-wide">
-              AGR
-              <span className="inline-flex items-center mx-1">
-                <svg
-                  className="w-5 h-5 text-gray-600"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </span>
-              SPHERE
-            </h1>
+            <img
+              src={logoImage}
+              alt="Agrosphere"
+              className="h-12 w-auto mx-auto mb-2"
+            />
             <p className="text-sm text-gray-600 font-medium">MARKET PLACE</p>
           </div>
           <button className="p-2">

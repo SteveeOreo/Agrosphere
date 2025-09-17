@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/useAuthStore";
+import logoImage from "../images/greenlogo.PNG";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -53,19 +54,7 @@ export default function SignUp() {
     <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Header with Logo */}
       <div className="bg-white p-6 text-center shadow-sm">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-wide">
-          AGR
-          <span className="inline-flex items-center mx-2">
-            <svg
-              className="w-8 h-8 text-gray-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-            </svg>
-          </span>
-          SPHERE
-        </h1>
+        <img src={logoImage} alt="Agrosphere" className="h-16 w-auto mx-auto" />
       </div>
 
       {/* Sign Up Form */}

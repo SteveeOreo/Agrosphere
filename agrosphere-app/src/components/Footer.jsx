@@ -1,3 +1,5 @@
+import logoImage from "../images/logo.PNG";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6 mt-auto">
@@ -5,19 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Brand */}
           <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-bold tracking-wide">
-              AGR
-              <span className="inline-flex items-center mx-1">
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </span>
-              SPHERE
-            </h3>
+            <img src={logoImage} alt="Agrosphere" className="h-8 w-auto mb-2" />
             <p className="text-sm text-gray-300 mt-1">
               Connecting farmers for stronger communities
             </p>
