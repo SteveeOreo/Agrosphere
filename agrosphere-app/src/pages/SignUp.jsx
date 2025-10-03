@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/useAuthStore";
-import logoImage from "../images/greenlogo.PNG";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -52,9 +51,10 @@ export default function SignUp() {
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
-      {/* Header with Logo */}
+      {/* Header */}
       <div className="bg-white p-6 text-center shadow-sm">
-        <img src={logoImage} alt="Agrosphere" className="h-16 w-auto mx-auto" />
+        <h1 className="text-2xl font-bold text-gray-800">Create Account</h1>
+        <p className="text-sm text-gray-600 mt-1">Join the Agrosphere community</p>
       </div>
 
       {/* Sign Up Form */}

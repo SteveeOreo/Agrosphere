@@ -12,6 +12,9 @@ import SignIn from "./pages/SignIn";
 import Menu from "./pages/Menu";
 import Training from "./pages/Training";
 import Settings from "./pages/Settings";
+import Analytics from "./pages/Analytics";
+import BulkPurchasing from "./components/BulkPurchasing";
+import Notifications from "./pages/Notifications";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/training" element={<Training />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/bulk-purchasing" element={<BulkPurchasing />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Routes>
         </main>
 

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Brand */}
           <div className="mb-4 md:mb-0">
-            <img src={logoImage} alt="Agrosphere" className="h-8 w-auto mb-2" />
+            <img src={logoImage} alt="Agrosphere" className="h-6 w-auto mb-2" />
             <p className="text-sm text-gray-300 mt-1">
               Connecting farmers for stronger communities
             </p>

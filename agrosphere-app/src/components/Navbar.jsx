@@ -20,12 +20,12 @@ export default function Navbar() {
             <img
               src={logoImage}
               alt="Agrosphere"
-              className="h-8 sm:h-10 w-auto"
+              className="h-6 sm:h-7 w-auto"
             />
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="space-x-6 hidden md:flex">
+          <div className="space-x-6 hidden md:flex text-sm font-bold">
             <Link to="/" className="hover:text-yellow-400 transition">
               Home
             </Link>
@@ -36,10 +36,16 @@ export default function Navbar() {
               Marketplace
             </Link>
             <Link to="/farmers" className="hover:text-yellow-400 transition">
-              Services
+              Farmer Services
             </Link>
             <Link to="/forum" className="hover:text-yellow-400 transition">
               Forum
+            </Link>
+            <Link to="/analytics" className="hover:text-yellow-400 transition">
+              Analytics
+            </Link>
+            <Link to="/bulk-purchasing" className="hover:text-yellow-400 transition">
+              Bulk Buying
             </Link>
           </div>
 

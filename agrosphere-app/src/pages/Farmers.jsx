@@ -1,29 +1,14 @@
-import logoImage from "../images/greenlogo.PNG";
+import WeatherWidget from "../components/WeatherWidget";
+import MarketDataWidget from "../components/MarketDataWidget";
 
 export default function Farmers() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="bg-white p-4 shadow-sm">
-        <div className="flex items-center justify-center mb-4">
-          <div className="text-center relative">
-            {/* Chicken silhouette background */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-10">
-              <svg
-                className="w-32 h-32 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M19 8.35L17.65 7H16.5C15.24 7 14.04 6.65 13 6L11.5 5.5L10 6C8.96 6.65 7.76 7 6.5 7H5.35L4 8.35V10.5C4 11.33 4.67 12 5.5 12H6.5V13.5C6.5 15.16 7.84 16.5 9.5 16.5V18.5C9.5 19.33 10.17 20 11 20S12.5 19.33 12.5 18.5V16.5H13.5V18.5C13.5 19.33 14.17 20 15 20S16.5 19.33 16.5 18.5V16.5C18.16 16.5 19.5 15.16 19.5 13.5V12H20.5C21.33 12 22 11.33 22 10.5V8.35H19Z" />
-              </svg>
-            </div>
-
-            <img
-              src={logoImage}
-              alt="Agrosphere"
-              className="h-16 w-auto relative z-10"
-            />
-          </div>
+        <div className="text-center mb-4">
+          <h1 className="text-2xl font-bold text-gray-800">Farmer Services</h1>
+          <p className="text-sm text-gray-600 mt-1">Access essential farming tools and information</p>
         </div>
 
         {/* Search Bar */}
@@ -68,6 +53,12 @@ export default function Farmers() {
             </svg>
           </button>
         </div>
+      </div>
+
+      {/* Weather and Market Data Section */}
+      <div className="p-4 space-y-4">
+        <WeatherWidget />
+        <MarketDataWidget />
       </div>
 
       {/* Services Grid */}

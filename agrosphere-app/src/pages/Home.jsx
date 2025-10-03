@@ -1,6 +1,11 @@
+import ImageSlider from '../components/ImageSlider';
+
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
+      {/* Image Slider */}
+      <ImageSlider />
+
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-4 py-8 sm:px-6 sm:py-12 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto">
