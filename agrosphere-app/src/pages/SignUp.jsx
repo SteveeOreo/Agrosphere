@@ -53,7 +53,7 @@ export default function SignUp() {
     <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Header */}
       <div className="bg-white p-6 text-center shadow-sm">
-        <h1 className="text-2xl font-bold text-gray-800">Create Account</h1>
+        <h1 className="text-2xl font-bold text-primary">Create Account</h1>
         <p className="text-sm text-gray-600 mt-1">Join the Agrosphere community</p>
       </div>
 
@@ -70,7 +70,7 @@ export default function SignUp() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* First Name */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
+              <label className="block text-primary font-medium mb-2">
                 First Name:
               </label>
               <input
@@ -85,7 +85,7 @@ export default function SignUp() {
 
             {/* Last Name */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
+              <label className="block text-primary font-medium mb-2">
                 Last Name:
               </label>
               <input
@@ -100,7 +100,7 @@ export default function SignUp() {
 
             {/* Email */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
+              <label className="block text-primary font-medium mb-2">
                 Email:
               </label>
               <div className="relative">
@@ -120,7 +120,7 @@ export default function SignUp() {
 
             {/* Password */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
+              <label className="block text-primary font-medium mb-2">
                 Password:
               </label>
               <div className="relative">
@@ -166,7 +166,7 @@ export default function SignUp() {
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
+              <label className="block text-primary font-medium mb-2">
                 Confirm password:
               </label>
               <div className="relative">
@@ -214,7 +214,7 @@ export default function SignUp() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gray-200 text-gray-800 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gray-200 text-gray-900 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Creating Account..." : "Sign Up"}
             </button>
@@ -222,10 +222,10 @@ export default function SignUp() {
             {/* Sign In Link */}
             <div className="text-center">
               <p className="text-gray-600">
-                Already have an account,{" "}
+                Already have an account?{" "}
                 <Link
                   to="/signin"
-                  className="text-gray-800 font-medium hover:text-green-700 underline"
+                  className="text-primary font-medium hover:text-green-700 underline"
                 >
                   Sign In
                 </Link>

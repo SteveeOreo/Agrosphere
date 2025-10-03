@@ -9,7 +9,7 @@ export default function Training() {
         <div className="flex items-center justify-between">
           <button className="p-2">
             <svg
-              className="w-6 h-6 text-gray-600"
+              className="w-6 h-6 text-secondary"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -22,7 +22,7 @@ export default function Training() {
               />
             </svg>
           </button>
-          <div className="text-right text-xl font-bold text-gray-800">6</div>
+          <div className="text-right text-xl font-bold text-primary">6</div>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ export default function Training() {
         <div className="flex justify-center">
           <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
             <svg
-              className="w-6 h-6 text-gray-600"
+              className="w-6 h-6 text-secondary"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -45,8 +45,8 @@ export default function Training() {
       <div className="p-4">
         {/* Header */}
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">Saved</h1>
-          <p className="text-gray-500">
+          <h1 className="text-2xl font-bold text-primary mb-2">Training Modules</h1>
+          <p className="text-muted">
             You have saved {savedCourses.length} Courses
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function Training() {
             >
               <div className="aspect-video bg-gray-200 flex items-center justify-center">
                 <svg
-                  className="w-16 h-16 text-gray-400"
+                  className="w-16 h-16 text-muted"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -68,13 +68,13 @@ export default function Training() {
                 </svg>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className="text-lg font-semibold text-primary">
                   {course.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-secondary mt-1">
                   {course.description}
                 </p>
-                <span className="inline-block mt-2 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                <span className="inline-block mt-2 px-2 py-1 bg-green-100 text-success text-xs rounded-full">
                   {course.category}
                 </span>
               </div>
@@ -83,8 +83,8 @@ export default function Training() {
 
           {savedCourses.length === 0 && (
             <div className="text-center py-8">
-              <p className="text-gray-500">No saved courses yet</p>
-              <p className="text-sm text-gray-400 mt-1">
+              <p className="text-muted">No saved courses yet</p>
+              <p className="text-sm text-muted opacity-75 mt-1">
                 Start browsing courses to save your favorites
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function Training() {
 
         {/* Browse More Courses */}
         <div className="mt-8">
-          <button className="w-full bg-yellow-400 text-gray-800 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 hover:text-white transition-colors">
+          <button className="w-full bg-yellow-400 text-primary py-4 rounded-lg text-lg font-semibold hover:bg-green-500 hover:text-white transition-colors">
             Browse More Courses
           </button>
         </div>

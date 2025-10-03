@@ -78,7 +78,7 @@ export default function BulkPurchasing() {
         <div key={offer.id} className="bg-white rounded-lg shadow-sm border p-4">
           <div className="flex justify-between items-start mb-3">
             <div>
-              <h3 className="font-semibold text-gray-800">{offer.product}</h3>
+              <h3 className="font-semibold text-primary">{offer.product}</h3>
               <p className="text-sm text-gray-600">by {offer.organizer}</p>
             </div>
             <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -145,7 +145,7 @@ export default function BulkPurchasing() {
         <div key={deal.id} className="bg-white rounded-lg shadow-sm border p-4">
           <div className="flex justify-between items-start mb-3">
             <div>
-              <h3 className="font-semibold text-gray-800">{deal.product}</h3>
+              <h3 className="font-semibold text-primary">{deal.product}</h3>
               <p className="text-sm text-gray-600">{deal.supplier}</p>
             </div>
             <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">
@@ -161,7 +161,7 @@ export default function BulkPurchasing() {
             </div>
             <div>
               <p className="text-sm text-gray-600">Available</p>
-              <p className="font-semibold text-gray-800">{deal.quantity}</p>
+              <p className="font-semibold text-primary">{deal.quantity}</p>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export default function BulkPurchasing() {
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="bg-white p-4 shadow-sm">
-        <h1 className="text-xl font-bold text-gray-800 text-center">Bulk Purchasing</h1>
+        <h1 className="text-xl font-bold text-primary text-center">Bulk Purchasing</h1>
         <p className="text-sm text-gray-600 text-center mt-1">
           Save money through group buying and wholesale deals
         </p>

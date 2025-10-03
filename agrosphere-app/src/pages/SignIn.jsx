@@ -116,7 +116,7 @@ export default function SignIn() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gray-200 text-gray-800 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gray-200 text-gray-900 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Signing In..." : "Sign In"}
             </button>

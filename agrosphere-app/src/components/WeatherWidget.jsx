@@ -186,7 +186,7 @@ const WeatherWidget = ({ location = "Lagos, Nigeria", compact = false }) => {
                     ? 'bg-yellow-400'
                     : 'bg-blue-400'
                 }`}></div>
-                <p className="text-sm text-gray-700">{tip.message}</p>
+                <p className="text-sm text-secondary">{tip.message}</p>
               </div>
             </div>
           ))}

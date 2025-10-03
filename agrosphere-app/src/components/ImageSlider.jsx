@@ -85,7 +85,7 @@ export default function ImageSlider() {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
         aria-label="Previous slide"
       >
         <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ export default function ImageSlider() {
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-20 hover:bg-opacity-30 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
         aria-label="Next slide"
       >
         <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
