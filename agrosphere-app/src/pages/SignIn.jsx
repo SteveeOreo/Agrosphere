@@ -22,29 +22,26 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     clearError();
-
     const result = await signIn(formData);
-
     if (result.success) {
-      // Redirect to home page after successful login
       navigate("/");
     }
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className="bg-gray-50 min-h-screen flex flex-col">
       {/* Header */}
-      <div className="bg-white p-6 text-center shadow-sm">
-        <h1 className="text-2xl font-bold text-gray-800">Welcome Back</h1>
-        <p className="text-sm text-gray-600 mt-1">Sign in to your Agrosphere account</p>
+      <div className="p-6 text-center shadow-sm">
+        <h1 className="text-2xl font-bold text-primary">Welcome back</h1>
+        <p className="text-sm text-primary mt-1">Sign in to continue</p>
       </div>
 
       {/* Sign In Form */}
-      <div className="flex-1 flex items-start justify-center p-6 pt-19">
-        <div className="w-full max-w-md">
-          {/* Error Message */}
+      <div className="flex items-center justify-center p-6">
+        <div className="w-full max-w-md card card-bordered">
+          {/* Error Messages */}
           {error && (
-            <div className="mb-4 p-3 bg-red-100 border border-red-300 text-red-700 rounded-lg">
+            <div className="mb-4 p-3 bg-error/10 border border-error text-error rounded-lg">
               {error}
             </div>
           )}
@@ -52,25 +49,23 @@ export default function SignIn() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Email:
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Ngozinweke@blablabla.com"
-                className="w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
-                required
-              />
+              <label className="label">Email:</label>
+              <div className="relative">
+                <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted">@</span>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="input pl-8"
+                  required
+                />
+              </div>
             </div>
 
             {/* Password */}
             <div>
-              <label className="block text-gray-800 font-medium mb-2">
-                Password:
-              </label>
+              <label className="label">Password:</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -78,13 +73,13 @@ export default function SignIn() {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="••••••••••••••"
-                  className="w-full p-4 pr-12 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                  className="input pr-12"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted hover:text-secondary"
                 >
                   <svg
                     className="w-5 h-5"
@@ -113,22 +108,18 @@ export default function SignIn() {
             </div>
 
             {/* Sign In Button */}
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-gray-200 text-gray-900 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+            <button type="submit" disabled={isLoading} className="btn btn-primary w-full">
               {isLoading ? "Signing In..." : "Sign In"}
             </button>
 
-            {/* Forgot Password Link */}
+            {/* Sign Up Link */}
             <div className="text-center">
-              <Link
-                to="/forgot-password"
-                className="text-gray-800 hover:text-green-700 underline"
-              >
-                Forgot password ?
-              </Link>
+              <p className="text-secondary">
+                New to Agrosphere?{" "}
+                <Link to="/signup" className="text-primary font-medium hover:text-primary underline">
+                  Create an Account
+                </Link>
+              </p>
             </div>
           </form>
         </div>

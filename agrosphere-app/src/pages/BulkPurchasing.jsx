@@ -182,7 +182,7 @@ export default function BulkPurchasing() {
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="bg-white p-4 shadow-sm">
-        <h1 className="text-xl font-bold text-primary text-center">Bulk Purchasing</h1>
+        <h1 className="text-xl font-bold text-secondary text-center">Bulk Purchasing</h1>
         <p className="text-sm text-gray-600 text-center mt-1">
           Save money through group buying and wholesale deals
         </p>

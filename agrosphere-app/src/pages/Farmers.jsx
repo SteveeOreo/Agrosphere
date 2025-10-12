@@ -7,7 +7,7 @@ export default function Farmers() {
       {/* Header */}
       <div className="bg-white px-4 sm:px-6 lg:px-8 py-8 shadow-sm border-b border-slate-200">
         <div className="text-center mb-6">
-          <h1 className="text-2xl font-heading font-bold text-primary mb-2">Farmer Services</h1>
+          <h1 className="text-2xl font-heading font-bold text-secondary mb-2">Farmer Services</h1>
           <p className="text-sm text-secondary">Access essential farming tools and information</p>
         </div>
 
@@ -16,7 +16,7 @@ export default function Farmers() {
           <input
             type="text"
             placeholder="Search services..."
-            className="input pl-4 pr-12 rounded-full"
+            className="input pl-4 pr-12 rounded-full text-secondary"
           />
           <button className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 hover:bg-slate-100 rounded transition-colors">
             <svg
@@ -30,25 +30,6 @@ export default function Farmers() {
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-        </div>
-
-        {/* Menu Button */}
-        <div className="flex justify-end">
-          <button className="p-2 hover:bg-slate-100 rounded-lg transition-colors">
-            <svg
-              className="w-6 h-6 text-secondary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </button>
@@ -84,7 +65,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm leading-tight">
+              <h3 className="card-title text-sm leading-tight text-secondary">
                 Quality Feed Formula Amplifications
               </h3>
             </div>
@@ -110,7 +91,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm">
+              <h3 className="card-title text-sm text-secondary">
                 Breeds
               </h3>
             </div>
@@ -136,7 +117,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm">
+              <h3 className="card-title text-sm text-secondary">
                 Poultry Disease Management
               </h3>
             </div>
@@ -162,7 +143,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm">
+              <h3 className="card-title text-sm text-secondary">
                 Market Price Analytics
               </h3>
             </div>
@@ -188,7 +169,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm leading-tight">
+              <h3 className="card-title text-sm leading-tight text-secondary">
                 Community Support Network
               </h3>
             </div>
@@ -214,7 +195,7 @@ export default function Farmers() {
                   </svg>
                 </div>
               </div>
-              <h3 className="card-title text-sm leading-tight">
+              <h3 className="card-title text-sm leading-tight text-secondary">
                 Recycling waste to manure
               </h3>
             </div>

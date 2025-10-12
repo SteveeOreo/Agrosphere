@@ -92,7 +92,7 @@ export default function Marketplace() {
             <div className="px-4 sm:px-6 lg:px-8 py-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-center flex-1">
-                  <h1 className="font-heading text-2xl sm:text-3xl font-bold text-primary mb-2">Marketplace</h1>
+                  <h1 className="font-heading text-2xl sm:text-3xl font-bold text-secondary mb-2">Marketplace</h1>
                   <p className="text-sm sm:text-base text-secondary">
                     Trade agricultural products and commodities
                   </p>
@@ -187,7 +187,7 @@ export default function Marketplace() {
                   d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                 />
               </svg>
-              <span className="text-primary font-medium text-sm">Upload</span>
+              <span className="text-secondary font-medium text-sm">Upload</span>
               <svg
                 className="w-4 h-4 text-secondary"
                 fill="none"
@@ -207,7 +207,7 @@ export default function Marketplace() {
               <input
                 type="text"
                 placeholder="I am looking for....."
-                className="w-full pl-4 pr-12 py-3 text-primary bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-success/20 focus:border-success text-sm"
+                className="text-secondary w-full pl-4 pr-12 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-success/20 focus:border-success text-sm"
               />
               <button className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <svg
@@ -234,7 +234,7 @@ export default function Marketplace() {
               <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z" />
               </svg>
-              <span className="text-primary font-medium text-sm">Filters</span>
+              <span className="text-secondary font-medium text-sm">Filters</span>
             </button>
           </div>
 
@@ -244,7 +244,7 @@ export default function Marketplace() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {/* Sort By */}
                 <div>
-                  <label className="block text-sm font-medium text-primary mb-3">Sort By</label>
+                  <label className="block text-sm font-medium text-secondary mb-3">Sort By</label>
                   <select 
                     value={sortBy} 
                     onChange={(e) => setSortBy(e.target.value)}
@@ -259,7 +259,7 @@ export default function Marketplace() {
 
                 {/* Price Range */}
                 <div>
-                  <label className="block text-sm font-medium text-primary mb-3">Price Range</label>
+                  <label className="block text-sm font-medium text-secondary mb-3">Price Range</label>
                   <select 
                     value={priceRange} 
                     onChange={(e) => setPriceRange(e.target.value)}

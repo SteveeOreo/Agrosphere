@@ -178,7 +178,7 @@ export default function Forum() {
               />
             </svg>
           </button>
-          <h1 className="text-xl font-heading font-bold text-primary">Forum</h1>
+          <h1 className="text-xl font-heading font-bold text-secondary">Forum</h1>
           <button className="p-2 bg-success text-white rounded-lg hover:bg-success/90 transition-colors">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -193,9 +193,9 @@ export default function Forum() {
           <input
             type="text"
             placeholder="Search discussions..."
-            className="input pl-4 pr-12"
+            className="input pl-4 pr-12 text-secondary"
           />
-          <button className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-slate-100 rounded transition-colors">
+          <button className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-slate-100 rounded transition-colors ">
             <svg
               className="w-5 h-5 text-secondary"
               fill="none"
@@ -261,7 +261,7 @@ export default function Forum() {
               
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center space-x-3 mb-3">
-                    <h3 className="font-semibold text-primary">{post.author}</h3>
+                    <h3 className="font-semibold text-secondary">{post.author}</h3>
                     {post.isExpert && (
                       <span className="text-xs bg-warning/10 text-warning px-3 py-1 rounded-full font-medium">
                         Expert

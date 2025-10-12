@@ -50,19 +50,19 @@ export default function SignUp() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className="bg-gray-50 min-h-screen flex flex-col">
       {/* Header */}
-      <div className="bg-white p-6 text-center shadow-sm">
+      <div className="p-6 text-center shadow-sm">
         <h1 className="text-2xl font-bold text-primary">Create Account</h1>
-        <p className="text-sm text-gray-600 mt-1">Join the Agrosphere community</p>
+        <p className="text-sm text-primary mt-1">Join the Agrosphere community</p>
       </div>
 
       {/* Sign Up Form */}
       <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md card card-bordered">
           {/* Error Messages */}
           {(error || formError) && (
-            <div className="mb-4 p-3 bg-red-100 border border-red-300 text-red-700 rounded-lg">
+            <div className="mb-4 p-3 bg-error/10 border border-error text-error rounded-lg">
               {error || formError}
             </div>
           )}
@@ -70,49 +70,41 @@ export default function SignUp() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* First Name */}
             <div>
-              <label className="block text-primary font-medium mb-2">
-                First Name:
-              </label>
+              <label className="label">First Name:</label>
               <input
                 type="text"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                className="input"
                 required
               />
             </div>
 
             {/* Last Name */}
             <div>
-              <label className="block text-primary font-medium mb-2">
-                Last Name:
-              </label>
+              <label className="label">Last Name:</label>
               <input
                 type="text"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className="w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                className="input"
                 required
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-primary font-medium mb-2">
-                Email:
-              </label>
+              <label className="label">Email:</label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-                  @
-                </span>
+                <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted">@</span>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full pl-8 pr-4 py-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                  className="input pl-8"
                   required
                 />
               </div>
@@ -120,9 +112,7 @@ export default function SignUp() {
 
             {/* Password */}
             <div>
-              <label className="block text-primary font-medium mb-2">
-                Password:
-              </label>
+              <label className="label">Password:</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -130,13 +120,13 @@ export default function SignUp() {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="••••••••••••••"
-                  className="w-full p-4 pr-12 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                  className="input pr-12"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted hover:text-secondary"
                 >
                   <svg
                     className="w-5 h-5"
@@ -166,9 +156,7 @@ export default function SignUp() {
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-primary font-medium mb-2">
-                Confirm password:
-              </label>
+              <label className="label">Confirm password:</label>
               <div className="relative">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -176,13 +164,13 @@ export default function SignUp() {
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
                   placeholder="••••••••••••••"
-                  className="w-full p-4 pr-12 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent text-gray-800"
+                  className="input pr-12"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted hover:text-secondary"
                 >
                   <svg
                     className="w-5 h-5"
@@ -214,18 +202,18 @@ export default function SignUp() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gray-200 text-gray-900 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn btn-primary w-full"
             >
               {isLoading ? "Creating Account..." : "Sign Up"}
             </button>
 
             {/* Sign In Link */}
             <div className="text-center">
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Already have an account?{" "}
                 <Link
                   to="/signin"
-                  className="text-primary font-medium hover:text-green-700 underline"
+                  className="text-primary font-medium hover:text-primary underline"
                 >
                   Sign In
                 </Link>

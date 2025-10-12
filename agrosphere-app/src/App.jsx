@@ -17,7 +17,7 @@ const Menu = lazy(() => import("./pages/Menu"));
 const Training = lazy(() => import("./pages/Training"));
 const Settings = lazy(() => import("./pages/Settings"));
 const Analytics = lazy(() => import("./pages/Analytics"));
-const BulkPurchasing = lazy(() => import("./components/BulkPurchasing"));
+const BulkPurchasing = lazy(() => import("./pages/BulkPurchasing"));
 const Notifications = lazy(() => import("./pages/Notifications"));
 
 function App() {

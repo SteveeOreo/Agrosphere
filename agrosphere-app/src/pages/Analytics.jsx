@@ -62,7 +62,7 @@ const Analytics = () => {
       <div className="bg-white shadow-sm border-b border-slate-200">
         <div className="px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-            <h1 className="text-2xl font-heading font-bold text-primary">Farm Analytics</h1>
+            <h1 className="text-2xl font-heading font-bold text-secondary">Farm Analytics</h1>
             <div className="flex flex-wrap gap-2">
               {['week', 'month', 'quarter', 'year'].map((period) => (
                 <button
@@ -101,7 +101,7 @@ const Analytics = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-secondary text-sm font-medium">Total Orders</p>
-                  <p className="text-2xl font-bold text-primary mt-1">{analyticsData.overview.totalOrders}</p>
+                  <p className="text-2xl font-bold text-secondary mt-1">{analyticsData.overview.totalOrders}</p>
                   <p className="text-success text-sm font-medium mt-2">+8 this week</p>
                 </div>
                 <div className="bg-info/10 rounded-full p-3">
@@ -116,7 +116,7 @@ const Analytics = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-secondary text-sm font-medium">Avg Order Value</p>
-                  <p className="text-2xl font-bold text-primary mt-1">{analyticsData.overview.avgOrderValue}</p>
+                  <p className="text-2xl font-bold text-secondary mt-1">{analyticsData.overview.avgOrderValue}</p>
                   <p className="text-success text-sm font-medium mt-2">+12% this month</p>
                 </div>
                 <div className="bg-warning/10 rounded-full p-3">
@@ -131,7 +131,7 @@ const Analytics = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-secondary text-sm font-medium">Growth Rate</p>
-                  <p className="text-2xl font-bold text-primary mt-1">{analyticsData.overview.growthRate}</p>
+                  <p className="text-2xl font-bold text-secondary mt-1">{analyticsData.overview.growthRate}</p>
                   <p className="text-secondary text-sm mt-2">Monthly growth</p>
                 </div>
                 <div className="bg-brand-secondary/10 rounded-full p-3">
@@ -146,7 +146,7 @@ const Analytics = () => {
       </div>
 
       {/* Main Content */}
-      <div className="px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <div className="px-4 sm:px-6 lg:px-8 py-8 space-y-8 bg-white/50 backdrop-blur-sm rounded-xl">
         {/* Revenue Chart */}
         <div className="card">
           <Chart 
@@ -185,7 +185,7 @@ const Analytics = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Top Products List */}
           <div className="card">
-            <h2 className="card-title text-xl mb-6">Product Performance Details</h2>
+            <h2 className="card-title text-xl mb-6 text-secondary">Product Performance Details</h2>
             <div className="space-y-4">
               {analyticsData.topProducts.map((product, index) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100 hover:bg-slate-100 transition-colors">
@@ -194,12 +194,12 @@ const Analytics = () => {
                       <span className="text-success font-bold text-sm">#{index + 1}</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-primary">{product.name}</p>
+                      <p className="font-semibold text-secondary">{product.name}</p>
                       <p className="text-sm text-secondary">{product.units} units sold</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-bold text-primary">{product.sales}</p>
+                    <p className="font-bold text-secondary">{product.sales}</p>
                     <p className={`text-sm font-medium ${
                       product.growth.startsWith('+') ? 'text-success' : 'text-error'
                     }`}>
@@ -213,12 +213,12 @@ const Analytics = () => {
 
           {/* Market Insights */}
           <div className="card">
-            <h2 className="card-title text-xl mb-6">Market Insights</h2>
+            <h2 className="card-title text-xl mb-6 text-secondary">Market Insights</h2>
             <div className="space-y-4">
               {analyticsData.marketInsights.map((insight, index) => (
                 <div key={index} className="border border-slate-200 rounded-xl p-4 hover:border-slate-300 transition-colors">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-semibold text-primary">{insight.title}</h3>
+                    <h3 className="font-semibold text-secondary">{insight.title}</h3>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                       insight.impact === 'High' 
                         ? 'bg-error/10 text-error' 
@@ -242,7 +242,7 @@ const Analytics = () => {
 
         {/* Weather & Market Data Integration Preview */}
         <div className="card">
-          <h2 className="card-title text-xl mb-6">Weather & Market Intelligence</h2>
+          <h2 className="card-title text-xl mb-6 text-secondary">Weather & Market Intelligence</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-info/5 rounded-xl p-6 border border-info/10">
               <div className="flex items-center space-x-4 mb-4">
@@ -252,22 +252,22 @@ const Analytics = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">Weather Forecast</h3>
+                  <h3 className="font-semibold text-secondary">Weather Forecast</h3>
                   <p className="text-sm text-secondary">Next 7 days</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-secondary">Today</span>
-                  <span className="text-sm font-medium text-primary">28°C, Sunny</span>
+                  <span className="text-sm font-medium text-secondary">28°C, Sunny</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-secondary">Tomorrow</span>
-                  <span className="text-sm font-medium text-primary">26°C, Cloudy</span>
+                  <span className="text-sm font-medium text-secondary">26°C, Cloudy</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-secondary">Weekend</span>
-                  <span className="text-sm font-medium text-primary">24°C, Rain</span>
+                  <span className="text-sm font-medium text-secondary">24°C, Rain</span>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ const Analytics = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">Market Trends</h3>
+                  <h3 className="font-semibold text-secondary">Market Trends</h3>
                   <p className="text-sm text-secondary">Price movements</p>
                 </div>
               </div>
